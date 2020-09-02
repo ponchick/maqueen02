@@ -33,7 +33,6 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 let ИзмУгла = 0
 radio.setGroup(1)
-ИзмУгла = 0
 let Угол = 30
 maqueen.servoRun(maqueen.Servos.S1, Угол)
 basic.forever(function () {
