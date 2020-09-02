@@ -1,25 +1,36 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    Команда = receivedNumber
-    if (Команда == 1) {
-        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
-    } else if (Команда == 2) {
+    if (receivedNumber == 1) {
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 255)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 31)
+    } else if (receivedNumber == 2) {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
-    } else if (Команда == 3) {
+    } else if (receivedNumber == 3) {
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 31)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 255)
+    } else if (receivedNumber == 4) {
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 255)
-    } else if (Команда == 4) {
+    } else if (receivedNumber == 6) {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 255)
-    } else if (Команда == 5) {
+    } else if (receivedNumber == 7) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 31)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
+    } else if (receivedNumber == 8) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
+    } else if (receivedNumber == 9) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 31)
+    } else if (receivedNumber == 18) {
         ИзмУгла = -5
-    } else if (Команда == 6) {
+    } else if (receivedNumber == 12) {
         ИзмУгла = 5
+    } else if (receivedNumber == 10) {
+        ИзмУгла = 0
     } else {
         maqueen.motorStop(maqueen.Motors.All)
-        ИзмУгла = 0
     }
 })
-let Команда = 0
 let ИзмУгла = 0
 radio.setGroup(1)
 ИзмУгла = 0
