@@ -8,11 +8,11 @@ radio.onReceivedNumber(function (receivedNumber) {
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 31)
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 255)
     } else if (receivedNumber == 4) {
-        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 255)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 63)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 63)
     } else if (receivedNumber == 6) {
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
-        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 255)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 63)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 63)
     } else if (receivedNumber == 7) {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 31)
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
